@@ -20,7 +20,14 @@ class Leaderboard extends Component {
           <tr>
             <th>#</th>
             <th>Camper</th>
-            <th>Points</th>
+            <th>Points for the last month</th>
+            <th>Lifetime points</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>abc</td>
+            <td>1000</td>
+            <td>1000</td>
           </tr>
         </table>
       </div>
