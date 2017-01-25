@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["cube","teste the cube `val * val * val`."]]});
