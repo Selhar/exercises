@@ -22,7 +22,7 @@ fn main (){
 
     if input % 2 == 1 || input % 2 == 0 && input >= 6 && input <= 20 {
         println!("Weird");
-    } else {
+    } else if input % 2 == 0 && input >= 20 || input % 2 == 0 && input >= 2 && input <= 5{
         println!("Not weird")
     }
 
