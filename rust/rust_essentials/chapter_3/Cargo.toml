@@ -1,6 +1,0 @@
-[package]
-name = "chapter_3"
-version = "0.1.0"
-authors = ["selhar <gregoryjgoncalves@gmail.com>"]
-
-[dependencies]
