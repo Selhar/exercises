@@ -1,7 +1,7 @@
 from sys import argv
 script, filename = argv
 
-print "Erase: " % filename
+print "Erase: %r" % filename
 
 print "Opening file..."
 target = open(filename, 'w')
