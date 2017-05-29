@@ -16,4 +16,6 @@
 
 4 - Construção de um dos exemplos práticos
 
-5 - Construção de um projeto meu, usando o exemplo prático de base
+5 - Leitura e re-leitura do código prático, até que não restem dúvidas
+
+6 - Utilizar o exemplo prático como boilerplate para criar o meu projeto
