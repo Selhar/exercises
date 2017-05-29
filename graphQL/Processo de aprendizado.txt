@@ -3,13 +3,17 @@
 1 - Visão geral pra ter noção do que é, para qual necessidade foi criado e como funciona GraphQL: 
 			https://www.youtube.com/watch?v=BbFFCF5rnJg
 			https://www.youtube.com/watch?v=UBGzsb2UkeY
+			https://dev-blog.apollodata.com/graphql-explained-5844742f195e
 
 2 - Mesmo processo pra Koa:
 		https://www.youtube.com/watch?v=RVxx2T7SPw8
+		http://koajs.com/#introduction
 		
 3 - Exemplos práticos
 			https://blog.risingstack.com/graphql-overview-getting-started-with-graphql-and-nodejs/
 			https://medium.com/@nikita.marcius/tutorial-graphql-server-with-koa2-and-mongodb-27405e71713e
 			https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035
 
-4 - Construção do meu projeto
+4 - Construção de um dos exemplos práticos
+
+5 - Construção de um projeto meu, usando o exemplo prático de base
