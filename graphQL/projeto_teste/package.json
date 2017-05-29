@@ -16,7 +16,9 @@
     "babel-register": "^6.24.1"
   },
   "dependencies": {
+    "graphql": "^0.10.1",
     "graphql-server-koa": "^0.7.2",
+    "iterall": "^1.1.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
     "koa-router": "^7.1.1",
