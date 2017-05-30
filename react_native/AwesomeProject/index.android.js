@@ -22,21 +22,53 @@ export default class AwesomeProject extends Component {
       movies: null,
     };
   }
-  
-  render() {
-    var movie = MOCKED_MOVIES_DATA[0];
-    return (
-      <View style={styles.container}>
-        <Image
-          style={styles.thumbnail} 
-          source={{uri: movie.posters.thumbnail}} />
-        <View style={styles.rightContainer}>
-          <Text style={styles.title}>{movie.title}</Text>
-          <Text style={styles.year}>{movie.year}</Text>
-        </View>
-    </View>
-    );
+
+  componentDidMount() {
+    this.fetchData();
   }
+
+  fetchData() {
+    fetch(REQUEST_URL)
+      .then((response) => response.json())
+      .then((response_data) => {
+        this.setState({
+          movies: response_data.movies,
+        });
+      }).done();
+  }
+
+  	render() {
+    	if(!this.state.movies) {
+			return this.renderLoadingView();
+		}
+		var movie = this.state.movies[0];
+		return this.renderMovie(movie);
+	}
+
+	renderLoadingView() {
+		return (
+			<View style={styles.container}>
+				<Text>
+					Loading movies...
+				</Text>
+			</View>
+		);
+	}
+
+	renderMovie(movie) {
+		return (
+			<View style={styles.container}>
+				<Image
+					source={{uri: movie.posters.thumbnail}}
+					style={styles.thumbnail}
+				/>
+				<View style={styles.rightContainer}>
+					<Text style={styles.title}>{movie.title}</Text>
+					<Text style={styles.year}>{movie.year}</Text>
+				</View>
+			</View>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
