@@ -10,6 +10,7 @@ import {
   StyleSheet,
   Text,
   Image,
+  ListView,
   View
 } from 'react-native';
 
@@ -19,7 +20,10 @@ export default class AwesomeProject extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: null,
+      dataSource: new ListView.DataSource({
+		  rowHasChanged: (row1, row2) => row1 !== row2,
+	  }),
+	  loaded: false,
     };
   }
 
@@ -32,17 +36,24 @@ export default class AwesomeProject extends Component {
       .then((response) => response.json())
       .then((response_data) => {
         this.setState({
-          movies: response_data.movies,
+          	dataSource: 
+		  		this.state.dataSource.cloneWithRows(response_data.movies),
+			loaded: true,
         });
       }).done();
   }
 
   	render() {
-    	if(!this.state.movies) {
+    	if(!this.state.loaded){
 			return this.renderLoadingView();
 		}
-		var movie = this.state.movies[0];
-		return this.renderMovie(movie);
+		return(
+			<ListView 
+				dataSource={this.state.dataSource}
+				renderRow={this.renderMovie}
+				styles={styles.listView}
+			/>
+		);
 	}
 
 	renderLoadingView() {
@@ -93,7 +104,11 @@ const styles = StyleSheet.create({
     },
     year: {
       textAlign: 'center'
-    }
+    },
+	listView: {
+		paddingTop: 20,
+		backgroundColor: '#F5FCFF'
+	}
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
