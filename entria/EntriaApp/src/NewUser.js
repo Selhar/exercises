@@ -14,34 +14,30 @@ export default class Teste extends Component {
     title: 'Add a new user',
   };
 
-/*
-endereço: http://localhost:5000/graphql/
-Query pra adição de e-mail:
-
-query: ```
-      mutation {
-        RegisterEmail(input: {name: "abc" email: "abc@dfg.com" password: "asd"}){
-          token
-        }
-      }
-       ```
-        {mutation: 'query{viewer{users{count}}}
-       {RegisterEmail(input: {name: "abc" email: "abc@dfg.com" password: "asd"}){token}}
-*/
   sendUserData() {
-    this.setState({email: "check 1"}); //check
     let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open("POST", "http://localhost:5000/graphql");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.onload = function () {
-      this.setState({name: xhr.response});
-      this.setState({email: "check 3"}); //not check
-    }
     
-    xhr.send(JSON.stringify({mutation: 'query{viewer{users{count}}}'}));
-    this.setState({email: "check 2"}); //check
+    let name = "azxcbc";
+    let email = "abzxcc@dfg.zxccom";
+    let password = "azxczsd";
+    
+    const query = `mutation RegisterEmail($input: RegisterEmailInput!) {
+        RegisterEmail(input: $input) {
+          token
+        }
+      }`;
+    xhr.send(JSON.stringify({
+      query: query,
+      variables: {
+        input: {
+          name: name, email: email, password: password
+        }
+      }
+    }));
 }
 
   render() {
