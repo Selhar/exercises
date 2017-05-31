@@ -5,18 +5,19 @@ export default class Menu extends Component {
   static navigationOptions = {
     title: 'Menu',
   };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Button
-          onPress={() => navigate('Teste')}
+          onPress={() => navigate('NewUser')}
           title="Add a new user"
           color="#841584"            
         />
         <Button
-            onPress={() => navigate('Teste')}
-            title="Add a new user"
+            onPress={() => navigate('ListUsers')}
+            title="View all registered users"
             color="#841584"            
         />
       </View>
