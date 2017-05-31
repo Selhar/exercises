@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import request from 'request';
 
 export default class Teste extends Component {
   constructor(props) {
@@ -26,10 +25,24 @@ query: ```
         }
       }
        ```
+        {mutation: 'query{viewer{users{count}}}
+       {RegisterEmail(input: {name: "abc" email: "abc@dfg.com" password: "asd"}){token}}
 */
   sendUserData() {
-    request.post('http://localhost:5000/graphql/', {form:{key:'funciona bitte'}})
-  }
+    this.setState({email: "check 1"}); //check
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open("POST", "http://localhost:5000/graphql");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onload = function () {
+      this.setState({name: xhr.response});
+      this.setState({email: "check 3"}); //not check
+    }
+    
+    xhr.send(JSON.stringify({mutation: 'query{viewer{users{count}}}'}));
+    this.setState({email: "check 2"}); //check
+}
 
   render() {
     return (
