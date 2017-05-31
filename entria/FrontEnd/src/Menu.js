@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native';
-import { StackNavigator } from 'react-navigation';
 
 export default class Menu extends Component {
+  static navigationOptions = {
+    title: 'Menu',
+  };
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Button
-            title="asdas a new user"
-            color="#841584"            
+          onPress={() => navigate('Teste')}
+          title="Add a new user"
+          color="#841584"            
         />
         <Button
-            title="View or edit an existing user"
+            onPress={() => navigate('Teste')}
+            title="Add a new user"
             color="#841584"            
         />
       </View>
