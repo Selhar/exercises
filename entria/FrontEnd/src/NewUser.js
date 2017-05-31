@@ -15,17 +15,7 @@ export default class Teste extends Component {
   };
 
   sendUserData() {
-    fetch('http://localhost:5000/graphql/',{ method: "POST", body: 
-      JSON.stringify({
-        query: ```
-        mutation {
-          RegisterEmail(input: {name: "abc" email: "abc@dfg.com" password: "asd"}){
-            token
-          }
-        }
-        ```
-      }) 
-    })
+    fetch('http://localhost:5000/graphql/',{ method: "POST", body: "boga"})
 
   }
 
