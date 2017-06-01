@@ -18,13 +18,13 @@ export default class ListUsers extends Component {
     xhr.open("POST", "http://localhost:5000/graphql");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json");
-    let output = [];
+    let profile_data = [];
     
     xhr.onload = () => {
       for(let item of xhr.response.data.viewer.users.edges){
-        output.push(item.node)
+        profile_data.push(item.node)
       }
-      this.setState({profiles: output});
+      this.setState({profiles: profile_data});
     };
 
     const query = "query {viewer {users {edges {node {name id}}}}}";
@@ -33,18 +33,11 @@ export default class ListUsers extends Component {
 
   render() {
     if(this.state.profiles.length > 0){
-      let output = [];
-
-      for(let i = 0; i < this.state.profiles.length; i++){
-        output.push(
-          <Text>{this.state.profiles[i].name}</Text>
-        )
-      }
-      
       return (
          <View>
           <FlatList 
             data={this.state.profiles} 
+            keyExtractor={(item) => item.id}
             renderItem={({item}) => <Text>{item.name}</Text>} 
           />
         </View>
@@ -57,8 +50,3 @@ export default class ListUsers extends Component {
     );
   }
 }
-
-/* { renderProfiles.map((item) => {
-          <Text> item.name - item.id </Text>
-        }) }
-        */
