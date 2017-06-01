@@ -14,16 +14,19 @@ export default class Teste extends Component {
     title: 'Add a new user',
   };
 
-  sendUserData() {
+  sendUserData = () => {
+    const { navigate } = this.props.navigation;
     let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open("POST", "http://localhost:5000/graphql");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json");
+
+    xhr.onload = () => navigate('ListUsers')
     
-    let name = "azxcbc";
-    let email = "abzxcc@dfg.zxccom";
-    let password = "azxczsd";
+    let name = this.state.name;
+    let email = this.state.email;
+    let password = this.state.password;
     
     const query = `mutation RegisterEmail($input: RegisterEmailInput!) {
         RegisterEmail(input: $input) {
