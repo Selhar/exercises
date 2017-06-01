@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, FlatList} from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import Relay from 'react-relay';
+
+// export default Relay.createContainer(
+//   ListUsers, 
+//     {
+//       fragments: {
+//         viewer: () => Relay.QL`
+//           fragment on Viewer{
+//             name
+//             id
+//           }
+//         `
+//       }
+//     }
+// )
 
 export default class ListUsers extends Component {
   constructor(props) {
@@ -18,6 +33,7 @@ export default class ListUsers extends Component {
     xhr.open("POST", "http://localhost:5000/graphql");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json");
+
     let profile_data = [];
     
     xhr.onload = () => {
@@ -34,11 +50,11 @@ export default class ListUsers extends Component {
   render() {
     if(this.state.profiles.length > 0){
       return (
-         <View style={styles.container}>
+         <View>
           <FlatList
             data={this.state.profiles} 
             keyExtractor={(item) => item.id}
-            renderItem={({item}) => <Text style={styles.title}>{item.name}</Text>} 
+            renderItem={({item}) => <Text>{item.name}</Text>} 
           />
         </View>
       )
@@ -50,27 +66,3 @@ export default class ListUsers extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({ 
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff',
-  },
-  title: {
-    fontSize: 30,
-    alignSelf: 'center',
-    marginBottom: 30
-  },
-  button: {
-    height: 36,
-    backgroundColor: '#48BBEC',
-    borderColor: '#48BBEC',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 10,
-    alignSelf: 'stretch',
-    justifyContent: 'center'
-  }
-});
