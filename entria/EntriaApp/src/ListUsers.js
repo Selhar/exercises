@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Button, FlatList} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 export default class ListUsers extends Component {
@@ -21,11 +21,8 @@ export default class ListUsers extends Component {
     let output = [];
     
     xhr.onload = () => {
-      for(let node of xhr.response.data.viewer.users.edges){
-        output.push({
-          name: node.name,
-          id: node.id
-        })
+      for(let item of xhr.response.data.viewer.users.edges){
+        output.push(item.node)
       }
       this.setState({profiles: output});
     };
@@ -37,16 +34,19 @@ export default class ListUsers extends Component {
   render() {
     if(this.state.profiles.length > 0){
       let output = [];
-      for (let profile in this.state.profiles){
+
+      for(let i = 0; i < this.state.profiles.length; i++){
         output.push(
-          <Text>{profile.name} - {profile.id}</Text>
+          <Text>{this.state.profiles[i].name}</Text>
         )
       }
+      
       return (
          <View>
-           <Text>
-            {output}
-          </Text>
+          <FlatList 
+            data={this.state.profiles} 
+            renderItem={({item}) => <Text>{item.name}</Text>} 
+          />
         </View>
       )
     }
