@@ -47,27 +47,51 @@ export default class Teste extends Component {
     return (
       <View>
         <TextInput
+          style={styles.inputField}
           onChangeText={(name) => this.setState({name})}
           value={this.state.name}
           placeholder={'Your name'}
         />
         <TextInput
+          style={styles.inputField}
           onChangeText={(email) => this.setState({email})}
           value={this.state.email}
           placeholder={'your@email.com'}
         />
         <TextInput
+          style={styles.inputField}
           onChangeText={(password) => this.setState({password})}
           value={this.state.password}
           secureTextEntry={true}
           placeholder={'Your password'}
         />
         <Button
+            style={styles.button}
             onPress={() => this.sendUserData()}
-            title="Submit"
-            color="#841584"            
+            title="Submit"  
         />
       </View>
     );
   }
 }
+
+
+const styles = StyleSheet.create({ 
+  inputField: {
+    fontSize: 25,
+    justifyContent: 'center',
+    textAlign: 'center',
+    padding: 25,
+  },  
+  button: {
+    height: 36,
+    backgroundColor: '#fff',
+    borderColor: '#48BBEC',
+    borderWidth: 1,
+    borderRadius: 8,
+    marginBottom: 10,
+    padding: 25,
+    alignSelf: 'stretch',
+    justifyContent: 'center'
+  }
+});

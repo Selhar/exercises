@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native';
+import Relay from 'react-relay';
 
 export default class Menu extends Component {
   static navigationOptions = {
@@ -15,7 +16,8 @@ export default class Menu extends Component {
           title="Add a new user"
           color="#841584"            
         />
-        <Button
+        <Button 
+            style = {styles.button}
             onPress={() => navigate('ListUsers')}
             title="View all registered users"
             color="#841584"            
@@ -25,11 +27,20 @@ export default class Menu extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
   container: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    marginTop: 50,
+    padding: 20,
+  },
+  button: {
+    height: 36,
+    backgroundColor: '#48BBEC',
+    borderColor: '#48BBEC',
+    borderWidth: 1,
+    borderRadius: 8,
+    marginBottom: 10,
+    alignSelf: 'stretch',
+    justifyContent: 'center'
   }
 });

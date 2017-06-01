@@ -34,11 +34,11 @@ export default class ListUsers extends Component {
   render() {
     if(this.state.profiles.length > 0){
       return (
-         <View>
-          <FlatList 
+         <View style={styles.container}>
+          <FlatList
             data={this.state.profiles} 
             keyExtractor={(item) => item.id}
-            renderItem={({item}) => <Text>{item.name}</Text>} 
+            renderItem={({item}) => <Text style={styles.title}>{item.name}</Text>} 
           />
         </View>
       )
@@ -50,3 +50,27 @@ export default class ListUsers extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({ 
+  container: {
+    justifyContent: 'center',
+    marginTop: 50,
+    padding: 20,
+    backgroundColor: '#ffffff',
+  },
+  title: {
+    fontSize: 30,
+    alignSelf: 'center',
+    marginBottom: 30
+  },
+  button: {
+    height: 36,
+    backgroundColor: '#48BBEC',
+    borderColor: '#48BBEC',
+    borderWidth: 1,
+    borderRadius: 8,
+    marginBottom: 10,
+    alignSelf: 'stretch',
+    justifyContent: 'center'
+  }
+});
