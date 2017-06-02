@@ -14,6 +14,7 @@ class ViewerQueryRoute extends Route {
 
 class UserInfo extends Component {
   render () {
+    console.log(this.props.viewer.users.edges);
     return (
       <Text>viewer id: {this.props.viewer.id}</Text>
     )
@@ -24,7 +25,14 @@ UserInfo = Relay.createContainer(UserInfo, {
   fragments: {
     viewer: () => Relay.QL`
     fragment on Viewer {
-      id
+      users {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
     }`
   }
 })
