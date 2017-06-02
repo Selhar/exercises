@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Relay, { Route, RootContainer, DefaultNetworkLayer } from 'react-relay/classic';
+import ViewerQueryRoute from './ViewerQueryRoute';
 
 //*****HAS TO BE INTERNAL IP. LOCALHOST DOESN'T WORK ON ANDROID.*******
 Relay.injectNetworkLayer(new DefaultNetworkLayer('http://192.168.25.216:5000/graphql'))
-
-class ViewerQueryRoute extends Route {
-  static queries = {
-    viewer: () => Relay.QL` query { viewer } `
-  }
-  static routeName = 'ViewerQueryRoute'
-}
 
 class UserInfo extends Component {
   render () {
