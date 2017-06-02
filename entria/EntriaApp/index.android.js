@@ -8,7 +8,8 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import Relay, { Route, RootContainer, DefaultNetworkLayer } from 'react-relay/classic';
 
-Relay.injectNetworkLayer(new DefaultNetworkLayer('http://localhost:5000/graphql'))
+//*****HAS TO BE INTERNAL IP. LOCALHOST DOESN'T WORK ON ANDROID.*******
+Relay.injectNetworkLayer(new DefaultNetworkLayer('http://192.168.25.216:5000/graphql'))
 
 class ViewerQueryRoute extends Route {
   static queries = {
@@ -20,7 +21,7 @@ class ViewerQueryRoute extends Route {
 class UserInfo extends Component {
   render () {
     return (
-      <Text>User Length: {this.props.viewer.id}</Text>
+      <Text>viewer id: {this.props.viewer.id}</Text>
     )
   }
 }
