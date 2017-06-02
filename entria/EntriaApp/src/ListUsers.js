@@ -1,54 +1,35 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Button, FlatList} from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import Relay from 'react-relay';
+import { FlatList, Text } from 'react-native';
+import Relay from 'react-relay/classic';
 
-export default class ListUsers extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {profiles: []}
-  }
-  
-  static navigationOptions = {
-    title: 'List of currently registered users',
-  };
+class UserList extends Component {
+  render () {
+   //Print the object array for debugging
+   //console.log('\n\n\n\n\n\n\n'+JSON.stringify(this.props.viewer.users.edges, null, 4));
 
-  componentWillMount() {
-    let xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
-    xhr.open("POST", "http://localhost:5000/graphql");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Accept", "application/json");
-
-    let profile_data = [];
-    
-    xhr.onload = () => {
-      for(let item of xhr.response.data.viewer.users.edges){
-        profile_data.push(item.node)
-      }
-      this.setState({profiles: profile_data});
-    };
-
-    const query = "query {viewer {users {edges {node {name id}}}}}";
-    xhr.send(JSON.stringify({ query: query }));
-  }
-
-  render() {
-    if(this.state.profiles.length > 0){
-      return (
-         <View>
-          <FlatList
-            data={this.state.profiles} 
-            keyExtractor={(item) => item.id}
-            renderItem={({item}) => <Text>{item.name}</Text>} 
-          />
-        </View>
-      )
-    }
+   let data_root = this.props.viewer.users.edges;
     return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
+      <FlatList
+        data={data_root} 
+        keyExtractor={(item) => item.node.id}
+        renderItem={({item}) => <Text>{item.node.name}</Text>} 
+      />
+    )
   }
 }
+
+export default UserList = Relay.createContainer(UserList, {
+  fragments: {
+    viewer: () => Relay.QL`
+    fragment on Viewer {
+      users(first: 50) {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }`
+  }
+})

@@ -1,48 +1,18 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import Relay, { Route, RootContainer, DefaultNetworkLayer } from 'react-relay/classic';
-import ViewerQueryRoute from './ViewerQueryRoute';
+import Relay, { RootContainer, DefaultNetworkLayer } from 'react-relay/classic';
+import ViewerQueryRoute from './views/ViewerQueryRoute';
+//Adding all screens here for testing, at the end it should only be Menu.js
+import UserList from './ListUsers';
+import AddUser from './NewUser'
 
-//*****HAS TO BE INTERNAL IP. LOCALHOST DOESN'T WORK ON ANDROID.*******
-Relay.injectNetworkLayer(new DefaultNetworkLayer('http://192.168.25.216:5000/graphql'))
-
-class UserInfo extends Component {
-  render () {
-   //Print the object array for debugging
-   //console.log('\n\n\n\n\n\n\n'+JSON.stringify(this.props.viewer.users.edges, null, 4));
-
-   let data_root = this.props.viewer.users.edges;
-    return (
-      <FlatList
-        data={data_root} 
-        keyExtractor={(item) => item.node.id}
-        renderItem={({item}) => <Text>{item.node.name}</Text>} 
-      />
-    )
-  }
-}
-
-UserInfo = Relay.createContainer(UserInfo, {
-  fragments: {
-    viewer: () => Relay.QL`
-    fragment on Viewer {
-      users(first: 50) {
-        edges {
-          node {
-            id
-            name
-          }
-        }
-      }
-    }`
-  }
-})
+// *****HAS TO BE INTERNAL IP. LOCALHOST DOESN'T WORK ON ANDROID.*******
+Relay.injectNetworkLayer(new DefaultNetworkLayer('http://192.168.25.216:5000/graphql'));
 
 export default class EntriaApp extends Component {
   render() {
     return (
       <RootContainer
-        Component={UserInfo}
+        Component={UserList}
         route={new ViewerQueryRoute()}
       />
     )
