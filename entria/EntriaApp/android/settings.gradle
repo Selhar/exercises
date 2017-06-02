@@ -1,0 +1,3 @@
+rootProject.name = 'EntriaApp'
+
+include ':app'
