@@ -1,30 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
-/* 
-   TODO:
-   Relay []
-   Refatoração de listusers []
-   CSS []
-   DELETE/UPDATE mutations []
-*/
-
-import React from 'react';
-import { StackNavigator } from 'react-navigation';
-import Menu from './Menu';
-import ListUsers from './ListUsers';
-import NewUser from './NewUser';
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import Relay from 'react-relay';
+import { createRenderer } from './RelayUtils';
+import RelayStore from './RelayStore';
 
 const ViewerQuery = { viewer: () => Relay.QL`query { viewer }` }
-
-Relay.injectNetworkLayer(
-  new Relay.DefaultNetworkLayer('http://localhost:5000/graphql', {
-    credentials: 'same-origin',
-  })
+RelayStore.reset(
+  new Relay.DefaultNetworkLayer('http://localhost:5000/graphql')
 );
 
 class RelayApp extends Component {
@@ -37,6 +24,7 @@ class RelayApp extends Component {
   }
 }
 
+// Create a Relay.Renderer container
 export default createRenderer(RelayApp, {
   queries: ViewerQuery,
   fragments: {
@@ -46,7 +34,6 @@ export default createRenderer(RelayApp, {
           edges {
             node {
               name
-              id
             }
           }
         }
@@ -55,4 +42,10 @@ export default createRenderer(RelayApp, {
   },
 });
 
-
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
