@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native/classic';
 
 export default class FrontEnd extends Component {
   render() {

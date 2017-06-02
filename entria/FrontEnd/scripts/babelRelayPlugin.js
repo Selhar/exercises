@@ -1,6 +1,6 @@
 'use strict'
 
-const getBabelRelayPlugin = require('babel-plugin-relay')
+const getBabelRelayPlugin = require('babel-relay-plugin')
 const introspectionQuery = require('graphql/utilities').introspectionQuery
 const request = require('sync-request')
 
