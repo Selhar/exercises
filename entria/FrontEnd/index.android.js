@@ -12,42 +12,43 @@ import {
   View
 } from 'react-native';
 
-export default class FrontEnd extends Component {
+import Relay, { 
+  Route,
+  RootContainer,
+  DefaultNetworkLayer
+} from 'react-relay/classic'
+console.log("\nXXXXXXXXXXXXX\n")
+Relay.injectNetworkLayer(
+  new Relay.DefaultNetworkLayer('http://localhost:5000/graphql', {
+    credentials: 'same-origin',
+  })
+);
+console.log("\nTTTTTTTTTTTTTTT\n")
+class RelayApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+      <View style={styles.center}>
+        <Text>User Length: {this.props.viewer.users.edges.length}</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+// Create a Relay.Renderer container
+let teste = createRenderer(RelayApp, {
+  queries: ViewerQuery,
+  fragments: {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        users(first: 10) {
+          edges {
+            node {
+              name
+            }
+          }
+        }
+      }
+    `,
   },
 });
-
-AppRegistry.registerComponent('FrontEnd', () => FrontEnd);
+AppRegistry.registerComponent('FrontEnd', () => teste);
