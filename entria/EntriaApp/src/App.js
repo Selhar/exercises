@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Relay, { Route, RootContainer, DefaultNetworkLayer } from 'react-relay/classic';
 
 //*****HAS TO BE INTERNAL IP. LOCALHOST DOESN'T WORK ON ANDROID.*******
@@ -14,9 +14,16 @@ class ViewerQueryRoute extends Route {
 
 class UserInfo extends Component {
   render () {
-    console.log(this.props.viewer.users.edges);
+   //Print the object array for debugging
+   //console.log('\n\n\n\n\n\n\n'+JSON.stringify(this.props.viewer.users.edges, null, 4));
+
+   let data_root = this.props.viewer.users.edges;
     return (
-      <Text>viewer id: {this.props.viewer.id}</Text>
+      <FlatList
+        data={data_root} 
+        keyExtractor={(item) => item.node.id}
+        renderItem={({item}) => <Text>{item.node.name}</Text>} 
+      />
     )
   }
 }
@@ -25,7 +32,7 @@ UserInfo = Relay.createContainer(UserInfo, {
   fragments: {
     viewer: () => Relay.QL`
     fragment on Viewer {
-      users {
+      users(first: 50) {
         edges {
           node {
             id
@@ -37,7 +44,6 @@ UserInfo = Relay.createContainer(UserInfo, {
   }
 })
 
-//console.log('\n\n\n\n\n'+UserInfo+"\nXX\n"+ViewerQueryRoute);
 export default class EntriaApp extends Component {
   render() {
     return (
