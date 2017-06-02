@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_b05fdf32832d04bfd71a146e084394ad3fb2fbe7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_6499bb0e6fd32c8b7e622c306e4421dd5237c4fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f7b52d27920dbbb86e9cc47ca4921794aeda28c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.44.2_2f35439607e6d2d72bd383bae717b17b3bd9533a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_90e69a2d7d1ffc1736d800a28ae1e1499e43a736.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_82b826c52083852a2c2f25cead01bc9ab37d6396.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_fb965c5562298a59da7c416b93af987e30108305.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_a476826371b5d6caa3b663f0be02339dd93bb635.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_0f2d7a0702c06c0105f1d984920808d8e5545574.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_fb7afc2e0d3921277017ebbdb0f3fad406aee16a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_2c95dcd73b9d20f2068243f21fb4b4476ed6a24f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_97cd0247db20cdb88937b9cc1cd871c4cb174810.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_547adb671f122f622428084a4bbf097d98584c85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_3d45f585d4fcbe0d3bf11072bc7abd7054e2da13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_483eeae323de860e0f378efeb48a0e4328221765.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_97128386567d17416bfda8ab9c453fc667936b49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_6025da380679d4dce0e789ada35a561375b031dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.2/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_801cc14a2633a3535ad7b341743b78acd5945cb3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_be16e02942ea920b49905f37cd418d0ce05e9654.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_715095356d9826070850577bbd539b0c7a451f2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_c66df1f9ac3bfc183fb075fe9445854fc47dc878.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/selhar/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/selhar/Documents/projetos/exercises/entria/FrontEnd/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_978ef7ed2986bf5d68c75bb79110354bf9cc5a06.jar" />
+    </item>
+
+</items>
