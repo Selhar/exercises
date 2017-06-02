@@ -3,7 +3,7 @@ import { AppRegistry, StyleSheet, Text, View, Button, FlatList} from 'react-nati
 import { StackNavigator } from 'react-navigation';
 import Relay from 'react-relay';
 
-// export default Relay.createContainer(
+// export default Relay.createRenderer(
 //   ListUsers, 
 //     {
 //       fragments: {

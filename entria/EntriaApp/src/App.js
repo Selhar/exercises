@@ -11,17 +11,48 @@
    CSS []
    DELETE/UPDATE mutations []
 */
-import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native';
+
+import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import Menu from './Menu';
 import ListUsers from './ListUsers';
 import NewUser from './NewUser';
+import Relay from 'react-relay';
 
-export default Navigation = StackNavigator({ 
-    Menu: {screen: Menu}, 
-    NewUser: {screen: NewUser},
-    ListUsers: {screen: ListUsers}
+const ViewerQuery = { viewer: () => Relay.QL`query { viewer }` }
+
+Relay.injectNetworkLayer(
+  new Relay.DefaultNetworkLayer('http://localhost:5000/graphql', {
+    credentials: 'same-origin',
+  })
+);
+
+class RelayApp extends Component {
+  render() {
+    return (
+      <View style={styles.center}>
+        <Text>User Length: {this.props.viewer.users.edges.length}</Text>
+      </View>
+    );
+  }
+}
+
+export default createRenderer(RelayApp, {
+  queries: ViewerQuery,
+  fragments: {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        users(first: 10) {
+          edges {
+            node {
+              name
+              id
+            }
+          }
+        }
+      }
+    `,
+  },
 });
 
 
