@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ContestPreview from './ContestPreview';
 import data from '../assets/mockData.json';
+import axios from 'axios';
 
 class App extends React.Component {
     state = { 
@@ -10,11 +11,15 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({
-            contests: data.contests
-        });
+        axios.get('/api/contests')
+            .then(response => {
+                this.setState({
+                    contests: response.data.contests
+                });
+            })
+            .catch(console.error);
     }
-    
+
     render() {
         return (
             <div className="App">
