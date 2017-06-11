@@ -1,20 +1,9 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-
-const Index = (props) => {
-    return (
-        <h2>
-            o2i {props.a}
-        </h2>
-    );
-};
-
-Index.propTypes = {
-    a: PropTypes.string.isRequired
-};
+import App from './components/App';
+import data from './assets/mockData.json';
 
 reactDOM.render(
-    <Index a="a" />,
+    <App contests={data.contests}/>,
     document.getElementById('root')
 );
