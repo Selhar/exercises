@@ -1,10 +1,18 @@
 import React from 'react';
 import Header from './Header';
 import ContestPreview from './ContestPreview';
+import data from '../assets/mockData.json';
 
 class App extends React.Component {
     state = { 
-        title: 'Naming contest'
+        title: 'Naming contest',
+        contests: []
+    }
+
+    componentDidMount() {
+        this.setState({
+            contests: data.contests
+        });
     }
     
     render() {
@@ -12,8 +20,8 @@ class App extends React.Component {
             <div className="App">
                 <Header title={this.state.title} />
                 <div>
-                    {this.props.contests.map(contest =>
-                        <ContestPreview {...contest}/>
+                    {this.state.contests.map(contest =>
+                        <ContestPreview key={contest.id}{...contest}/>
                     )}                    
                 </div>
             </div>
