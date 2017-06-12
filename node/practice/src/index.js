@@ -3,6 +3,6 @@ import reactDOM from 'react-dom';
 import App from './components/App';
 
 reactDOM.render(
-    <App />,
+    <App initialContests = {[]}/>,
     document.getElementById('root')
 );

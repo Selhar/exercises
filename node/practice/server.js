@@ -3,7 +3,7 @@ import express from 'express';
 import api_router from './api';
 import sass from 'node-sass-middleware';
 import path from 'path';
-
+import serverRender from './serverRender';
 
 const server = express();
 
@@ -14,15 +14,18 @@ server.use(sass({
 server.set('view engine', 'ejs');
 
 server.get('/', (request, response) => {
-    response.render('index', {
-        content: '...'
-    });
+    serverRender()
+        .then(content => {
+            response.render('index', {
+                content 
+            });
+        })
+        .catch(console.error);
 });
 
 server.use('/api', api_router);
 server.use(express.static('public'));
 
-
-server.listen(config.port, () => {
+server.listen(config.port, config.host, () => {
     console.info('Listening on port: ', config.port);
 });
