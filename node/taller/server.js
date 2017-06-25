@@ -1,34 +1,38 @@
-/* 
-    Author: Selhar
-    Date: 2017
-    Contact: selhar@protonmail.com
-    License: GPL
+import config from './config';
+import apiRouter from './api';
+import sassMiddleware from 'node-sass-middleware';
+import path from 'path';
+import serverRender from './serverRender';
+import express from 'express';
+import bodyParser from 'body-parser';
 
-    TODO: 
-    default password;
-    truncating text;
-*/
-
-const express = require('express');
-const body_parser = require('body-parser');
-const mongoose = require('mongoose');
 const server = express();
-const root = process.cwd();
-const api_root = '/';
+server.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/taller');
+server.use(sassMiddleware({
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'public')
+}));
 
-server.use('/public', express.static(root + '/public'));
-server.use(body_parser());
-server.use(body_parser.json());
-server.use(body_parser.urlencoded( {extended: true} ));
+server.set('view engine', 'ejs');
 
-server.get(api_root, (request, response) => {
-	response.render(root + '/views/login.ejs');
+server.get(['/', '/contest/:contestId'], (req, res) => {
+  serverRender(req.params.contestId)
+    .then(({ initialMarkup, initialData }) => {
+      res.render('index', {
+        initialMarkup,
+        initialData
+      });
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(404).send('Bad Request');
+    });
 });
 
-server.listen(process.env.PORT || 3000, () => {
-    console.log("Listening");
-});
+server.use('/api', apiRouter);
+server.use(express.static('public'));
 
-module.exports = server; // for testing
+server.listen(config.port, config.host, () => {
+  console.info('Express listening on port', config.port);
+});
