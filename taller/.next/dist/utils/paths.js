@@ -3,7 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-//Preciso acessar esses caminhos tanto no servidor como no cliente, mantenho tudo aqui pra que a aplicação continue DRY
+//Preciso acessar esses caminhos tanto no servidor como no cliente, 
+//mantenho tudo aqui pra que a aplicação continue DRY
 
 var root = '/';
 

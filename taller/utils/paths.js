@@ -1,4 +1,5 @@
-//Preciso acessar esses caminhos tanto no servidor como no cliente, mantenho tudo aqui pra que a aplicação continue DRY
+//Preciso acessar esses caminhos tanto no servidor como no cliente, 
+//mantenho tudo aqui pra que a aplicação continue DRY
 
 let root = '/';
 

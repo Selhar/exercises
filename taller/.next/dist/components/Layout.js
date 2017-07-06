@@ -195,7 +195,16 @@ var Layout = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 74
 				}
-			}, 'Novo Pedido'))), this.props.children));
+			}, 'Novo Pedido')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_empresa, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 76
+				}
+			}, _react2.default.createElement(_MenuItem2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 77
+				}
+			}, 'Nova Empresa'))), this.props.children));
 		}
 	}]);
 

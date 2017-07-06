@@ -73,6 +73,9 @@ export default class Layout extends React.Component {
 						<Link href={paths.novo_pedido}>
 							<MenuItem>Novo Pedido</MenuItem>
 						</Link>
+						<Link href={paths.nova_empresa}>
+							<MenuItem>Nova Empresa</MenuItem>
+						</Link>
 					</Drawer>
 					{this.props.children}
 				</div>
