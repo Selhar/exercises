@@ -18,7 +18,7 @@ var _paths2 = _interopRequireDefault(_paths);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/home/selhar/Documents/projetos/exercises/custom-server-express/components/Header.js';
+var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/Header.js';
 
 
 var style = {
