@@ -177,7 +177,25 @@ var Layout = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 68
 				}
-			}, 'Nova conta'))), this.props.children));
+			}, 'Nova conta')), _react2.default.createElement(_link2.default, { href: _paths2.default.dashboard, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 70
+				}
+			}, _react2.default.createElement(_MenuItem2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 71
+				}
+			}, 'Dashboard')), _react2.default.createElement(_link2.default, { href: _paths2.default.novo_pedido, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 73
+				}
+			}, _react2.default.createElement(_MenuItem2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 74
+				}
+			}, 'Novo Pedido'))), this.props.children));
 		}
 	}]);
 

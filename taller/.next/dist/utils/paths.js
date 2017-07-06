@@ -12,6 +12,7 @@ var paths = {
 	nova_conta: root + 'nova_conta',
 	dashboard: root + 'dashboard',
 	nova_empresa: root + 'nova_empresa',
+	pedido: root + 'pedido',
 	novo_pedido: root + 'novo_pedido'
 };
 
