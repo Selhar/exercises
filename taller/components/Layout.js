@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
-
+import paths from '../utils/paths';
 
 export default class Layout extends React.Component {
 	state = {
@@ -30,10 +30,10 @@ export default class Layout extends React.Component {
 				</FloatingActionButton>
         
 				<Drawer open={this.state.open} style={{width: this.state.drawerWidth}}>
-          <Link href="/">
+          <Link href={paths.home}>
 						<MenuItem>Login</MenuItem>
 					</Link>
-          <Link href="/nova_conta">
+          <Link href={paths.nova_conta}>
 						<MenuItem>Nova conta</MenuItem>
 					</Link>
         </Drawer>

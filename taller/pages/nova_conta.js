@@ -2,6 +2,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Layout from '../components/Layout';
 
 const style = {
 	minHeight: '100vh',
@@ -29,18 +30,20 @@ const muiTheme = getMuiTheme({ userAgent: false });
 
 const nova_conta = () => (
 	<MuiThemeProvider muiTheme={muiTheme}>
-		<div style={style}>
-			<form>
-				<TextField hintText="E-mail" />
-				<br />
-				<TextField hintText="Senha" />
-				<br />
-				<TextField hintText="Repetir senha" />
-				<br />
-				<RaisedButton style={individualButtonStyle} label="Limpar" secondary={true} />
-				<RaisedButton style={individualButtonStyle} label="Confirmar" primary={true} />
-			</form>
-		</div>
+		<Layout>
+			<div style={style}>
+				<form>
+					<TextField hintText="E-mail" />
+					<br />
+					<TextField hintText="Senha" />
+					<br />
+					<TextField hintText="Repetir senha" />
+					<br />
+					<RaisedButton style={individualButtonStyle} label="Limpar" secondary={true} />
+					<RaisedButton style={individualButtonStyle} label="Confirmar" primary={true} />
+				</form>
+			</div>
+		</Layout>
 
 	</MuiThemeProvider>
 );

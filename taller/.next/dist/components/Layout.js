@@ -52,6 +52,10 @@ var _menu = require('material-ui/svg-icons/navigation/menu');
 
 var _menu2 = _interopRequireDefault(_menu);
 
+var _paths = require('../utils/paths');
+
+var _paths2 = _interopRequireDefault(_paths);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/Layout.js';
@@ -105,7 +109,7 @@ var Layout = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 32
 				}
-			}, _react2.default.createElement(_link2.default, { href: '/', __source: {
+			}, _react2.default.createElement(_link2.default, { href: _paths2.default.home, __source: {
 					fileName: _jsxFileName,
 					lineNumber: 33
 				}
@@ -114,7 +118,7 @@ var Layout = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 34
 				}
-			}, 'Login')), _react2.default.createElement(_link2.default, { href: '/nova_conta', __source: {
+			}, 'Login')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_conta, __source: {
 					fileName: _jsxFileName,
 					lineNumber: 36
 				}

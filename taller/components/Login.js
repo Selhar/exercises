@@ -1,6 +1,7 @@
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Link from 'next/link'
+import paths from '../utils/paths';
 
 const style = {
 	
@@ -29,7 +30,7 @@ const Login = () => (
 			<TextField hintText="Senha" />
 			<br />
 			<div style={buttonStyle}>
-				<Link href="/nova_conta">
+				<Link href={paths.nova_conta}>
 					<RaisedButton style={individualButtonStyle} label="Nova conta" secondary={true} />
 				</Link>
 				<RaisedButton style={individualButtonStyle} label="Login" primary={true} />
