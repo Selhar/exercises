@@ -26,7 +26,6 @@ var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/
 
 
 var style = {
-	minHeight: '100vh',
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center'
@@ -35,19 +34,23 @@ var style = {
 var Home = function Home() {
 	return _react2.default.createElement('div', { style: style, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 13
+			lineNumber: 12
 		}
 	}, _react2.default.createElement(_head2.default, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 14
+			lineNumber: 13
 		}
 	}, _react2.default.createElement('title', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 15
+			lineNumber: 14
 		}
 	}, 'Taller teste t\xE9cnico'), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
+			fileName: _jsxFileName,
+			lineNumber: 15
+		}
+	}), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Alegreya', rel: 'stylesheet', __source: {
 			fileName: _jsxFileName,
 			lineNumber: 16
 		}

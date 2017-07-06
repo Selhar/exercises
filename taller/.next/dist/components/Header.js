@@ -18,20 +18,26 @@ var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/
 
 
 var style = {
-	margin: 'auto'
+	textAlign: 'center',
+	fontFamily: '"Alegreya", "aleo", Georgia, "Times New Roman", Times, Georgia, "DejaVu Serif", serif',
+	fontStyle: 'italic',
+	fontWeight: 'bold',
+	textTransform: 'lowercase',
+	letterSpacing: '-0.01em',
+	fontSize: '2.5em'
 };
 
 var Header = function Header() {
 	return _react2.default.createElement('div', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 8
+			lineNumber: 14
 		}
 	}, _react2.default.createElement('h1', { style: style, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 9
+			lineNumber: 15
 		}
-	}, ' Taller '));
+	}, 'Taller'));
 };
 
 exports.default = Header;

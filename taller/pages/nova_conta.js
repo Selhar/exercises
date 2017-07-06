@@ -5,7 +5,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Layout from '../components/Layout';
 
 const style = {
-	minHeight: '100vh',
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center'

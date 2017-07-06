@@ -93,12 +93,7 @@ var _class = function (_React$Component) {
           fileName: _jsxFileName,
           lineNumber: 22
         }
-      }, _react2.default.createElement(_Home2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
-      })));
+      }));
     }
   }]);
 
