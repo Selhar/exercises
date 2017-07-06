@@ -1,7 +1,9 @@
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import Link from 'next/link'
 
 const style = {
+	
 };
 
 const buttonStyle = {
@@ -13,16 +15,26 @@ const individualButtonStyle = {
 	fontSize: '1vw'
 };
 
+const Header = {
+	position: 'absolute',
+	top: '25px',
+	
+}
+
 const Login = () => (
 	<div style={style}>
-		<TextField hintText="Login" />
-		<br />
-		<TextField hintText="Senha" />
-		<br />
-		<div style={buttonStyle}>
-    	<RaisedButton style={individualButtonStyle} label="Nova conta" secondary={true} />
-			<RaisedButton style={individualButtonStyle} label="Login" primary={true} />
-		</div>
+		<form>
+			<TextField hintText="Login" />
+			<br />
+			<TextField hintText="Senha" />
+			<br />
+			<div style={buttonStyle}>
+				<Link href="/nova_conta">
+					<RaisedButton style={individualButtonStyle} label="Nova conta" secondary={true} />
+				</Link>
+				<RaisedButton style={individualButtonStyle} label="Login" primary={true} />
+			</div>
+		</form>
 	</div>
 );
 

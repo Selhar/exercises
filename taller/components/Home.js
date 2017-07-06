@@ -3,10 +3,10 @@ import Login from '../components/Login';
 import Head from 'next/head';
 
 const style = {  
-		minHeight: '100vh',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center'
+	minHeight: '100vh',
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center'	
 };
 
 const Home = () => (
