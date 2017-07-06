@@ -1,18 +1,12 @@
 import Link from 'next/link'
-import paths from '../utils/paths';
 
 const style = {
-	marginRight: 15
+	margin: 'auto'
 }
 
 const Header = () => (
 	<div>
-		<Link href={paths.home}>
-			<a style={style}>Login</a>
-			</Link>
-		<Link href={paths.nova_conta}>
-			<a style={style}>Nova conta</a>
-		</Link>
+		<h1 style={style}> Taller </h1>
 	</div>
 )
 

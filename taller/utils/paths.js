@@ -1,4 +1,4 @@
-//Como next.js usa server e client side rendering, guardo aqui o caminho de todas URLS, para manter a aplicação DRY
+//Preciso acessar esses caminhos tanto no servidor como no cliente, mantenho tudo aqui pra que a aplicação continue DRY
 
 let root = '/';
 
