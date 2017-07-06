@@ -1,7 +1,6 @@
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Layout from '../components/Layout';
-
 const style = {
 	display: 'flex',
 	justifyContent: 'center',

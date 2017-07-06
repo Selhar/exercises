@@ -68,6 +68,10 @@ var _getMuiTheme = require('material-ui/styles/getMuiTheme');
 
 var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
 
+var _reactTapEventPlugin = require('react-tap-event-plugin');
+
+var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/Layout.js';
@@ -109,6 +113,15 @@ var Layout = function (_React$Component) {
 	}
 
 	(0, _createClass3.default)(Layout, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			try {
+				(0, _reactTapEventPlugin2.default)();
+			} catch (error) {
+				console.log(error);
+			};
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var buttonStyle = {
@@ -119,15 +132,15 @@ var Layout = function (_React$Component) {
 
 			return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 44
+					lineNumber: 53
 				}
 			}, _react2.default.createElement('div', { style: style, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 45
+					lineNumber: 54
 				}
 			}, _react2.default.createElement(_Header2.default, { titulo: this.props.titulo, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 46
+					lineNumber: 55
 				}
 			}), _react2.default.createElement(_FloatingActionButton2.default, {
 				label: 'Toggle Drawer',
@@ -135,34 +148,34 @@ var Layout = function (_React$Component) {
 				style: buttonStyle,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 47
+					lineNumber: 56
 				}
 			}, _react2.default.createElement(_menu2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 52
+					lineNumber: 61
 				}
 			})), _react2.default.createElement(_Drawer2.default, { open: this.state.open, style: { width: this.state.drawerWidth }, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 54
+					lineNumber: 63
 				}
 			}, _react2.default.createElement(_link2.default, { href: _paths2.default.home, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 55
+					lineNumber: 64
 				}
 			}, _react2.default.createElement(_MenuItem2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 56
+					lineNumber: 65
 				}
 			}, 'Login')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_conta, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 58
+					lineNumber: 67
 				}
 			}, _react2.default.createElement(_MenuItem2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 59
+					lineNumber: 68
 				}
 			}, 'Nova conta'))), this.props.children));
 		}

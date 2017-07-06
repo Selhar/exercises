@@ -1,4 +1,5 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 import Layout from '../components/Layout';
 import {
   Table,
@@ -20,7 +21,7 @@ const Dashboard = () => (
 	<Layout titulo="Dashboard">
 		<div style={style}>
 			<Table>
-    		<TableHeader displaySelectAll={false} >
+    		<TableHeader displaySelectAll={false} adjustForCheckbox={false} >
 					<TableRow>
 						<TableHeaderColumn>Nome fantasia</TableHeaderColumn>
 						<TableHeaderColumn>CNPJ</TableHeaderColumn>

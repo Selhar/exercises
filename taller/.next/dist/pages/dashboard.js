@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _RaisedButton = require('material-ui/RaisedButton');
+
+var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
 var _Layout = require('../components/Layout');
 
 var _Layout2 = _interopRequireDefault(_Layout);
@@ -29,144 +33,144 @@ var style = {
 var Dashboard = function Dashboard() {
 	return _react2.default.createElement(_Layout2.default, { titulo: 'Dashboard', __source: {
 			fileName: _jsxFileName,
-			lineNumber: 20
+			lineNumber: 21
 		}
 	}, _react2.default.createElement('div', { style: style, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 21
+			lineNumber: 22
 		}
 	}, _react2.default.createElement(_Table.Table, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 22
-		}
-	}, _react2.default.createElement(_Table.TableHeader, { displaySelectAll: false, __source: {
-			fileName: _jsxFileName,
 			lineNumber: 23
 		}
-	}, _react2.default.createElement(_Table.TableRow, {
-		__source: {
+	}, _react2.default.createElement(_Table.TableHeader, { displaySelectAll: false, adjustForCheckbox: false, __source: {
 			fileName: _jsxFileName,
 			lineNumber: 24
 		}
-	}, _react2.default.createElement(_Table.TableHeaderColumn, {
+	}, _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 25
 		}
-	}, 'Nome fantasia'), _react2.default.createElement(_Table.TableHeaderColumn, {
+	}, _react2.default.createElement(_Table.TableHeaderColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 26
 		}
-	}, 'CNPJ'), _react2.default.createElement(_Table.TableHeaderColumn, {
+	}, 'Nome fantasia'), _react2.default.createElement(_Table.TableHeaderColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 27
 		}
+	}, 'CNPJ'), _react2.default.createElement(_Table.TableHeaderColumn, {
+		__source: {
+			fileName: _jsxFileName,
+			lineNumber: 28
+		}
 	}, 'Qtd. Pedidos'))), _react2.default.createElement(_Table.TableBody, { displayRowCheckbox: false, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 30
+			lineNumber: 31
 		}
 	}, _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 31
-		}
-	}, _react2.default.createElement(_Table.TableRowColumn, {
-		__source: {
-			fileName: _jsxFileName,
 			lineNumber: 32
 		}
-	}, 'Drupatec solu\xE7\xF5es'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 33
 		}
-	}, '28.354.669/0001-09'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, 'Drupatec solu\xE7\xF5es'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 34
 		}
-	}, '1')), _react2.default.createElement(_Table.TableRow, {
+	}, '28.354.669/0001-09'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 36
+			lineNumber: 35
 		}
-	}, _react2.default.createElement(_Table.TableRowColumn, {
+	}, '1')), _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 37
 		}
-	}, 'BRFoods'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 38
 		}
-	}, '35.577.109/0001-70'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, 'BRFoods'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 39
 		}
-	}, '4')), _react2.default.createElement(_Table.TableRow, {
+	}, '35.577.109/0001-70'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 41
+			lineNumber: 40
 		}
-	}, _react2.default.createElement(_Table.TableRowColumn, {
+	}, '4')), _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 42
 		}
-	}, 'PasquePag'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 43
 		}
-	}, '34.763.818/0001-88'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, 'PasquePag'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 44
 		}
-	}, '0')), _react2.default.createElement(_Table.TableRow, {
+	}, '34.763.818/0001-88'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 46
+			lineNumber: 45
 		}
-	}, _react2.default.createElement(_Table.TableRowColumn, {
+	}, '0')), _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 47
 		}
-	}, 'ClubSocial'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 48
 		}
-	}, '21.211.526/0001-90'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, 'ClubSocial'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 49
 		}
-	}, '2')), _react2.default.createElement(_Table.TableRow, {
+	}, '21.211.526/0001-90'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 51
+			lineNumber: 50
 		}
-	}, _react2.default.createElement(_Table.TableRowColumn, {
+	}, '2')), _react2.default.createElement(_Table.TableRow, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 52
 		}
-	}, 'Bamerindus'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 53
 		}
-	}, '87.487.918/0001-95'), _react2.default.createElement(_Table.TableRowColumn, {
+	}, 'Bamerindus'), _react2.default.createElement(_Table.TableRowColumn, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 54
+		}
+	}, '87.487.918/0001-95'), _react2.default.createElement(_Table.TableRowColumn, {
+		__source: {
+			fileName: _jsxFileName,
+			lineNumber: 55
 		}
 	}, '1'))))));
 };

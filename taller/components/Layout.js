@@ -9,6 +9,7 @@ import paths from '../utils/paths';
 import Header from './Header';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const muiTheme = getMuiTheme({ userAgent: false })
 
@@ -23,6 +24,14 @@ export default class Layout extends React.Component {
 		open: false,
 		drawerWidth: '0'
 	};
+	
+	componentWillMount() {
+    	try {
+			injectTapEventPlugin();
+		} catch(error){
+			console.log(error)
+		};
+  	}
 
 	toggle = () => {
 		this.setState((previousState, props) => {
