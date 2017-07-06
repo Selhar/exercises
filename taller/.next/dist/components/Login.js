@@ -23,38 +23,51 @@ var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/
 
 var style = {};
 
+var buttonStyle = {
+	width: '100%'
+};
+
+var individualButtonStyle = {
+	width: '50%',
+	fontSize: '1vw'
+};
+
 var Login = function Login() {
 	return _react2.default.createElement('div', { style: style, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 8
+			lineNumber: 17
 		}
 	}, _react2.default.createElement(_TextField2.default, { hintText: 'Login', __source: {
 			fileName: _jsxFileName,
-			lineNumber: 9
+			lineNumber: 18
 		}
 	}), _react2.default.createElement('br', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 10
+			lineNumber: 19
 		}
-	}), _react2.default.createElement(_TextField2.default, { hintText: 'Password', __source: {
+	}), _react2.default.createElement(_TextField2.default, { hintText: 'Senha', __source: {
 			fileName: _jsxFileName,
-			lineNumber: 11
+			lineNumber: 20
 		}
 	}), _react2.default.createElement('br', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 12
+			lineNumber: 21
 		}
-	}), _react2.default.createElement(_RaisedButton2.default, { label: 'Primary', primary: true, __source: {
+	}), _react2.default.createElement('div', { style: buttonStyle, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 13
+			lineNumber: 22
 		}
-	}), _react2.default.createElement(_RaisedButton2.default, { label: 'Secondary', secondary: true, __source: {
+	}, _react2.default.createElement(_RaisedButton2.default, { style: individualButtonStyle, label: 'Nova conta', secondary: true, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 14
+			lineNumber: 23
 		}
-	}));
+	}), _react2.default.createElement(_RaisedButton2.default, { style: individualButtonStyle, label: 'Login', primary: true, __source: {
+			fileName: _jsxFileName,
+			lineNumber: 24
+		}
+	})));
 };
 
 exports.default = Login;
