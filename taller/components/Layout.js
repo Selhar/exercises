@@ -7,6 +7,10 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import paths from '../utils/paths';
 import Header from './Header';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+const muiTheme = getMuiTheme({ userAgent: false })
 
 const style = {
 	margin: '15px',
@@ -30,28 +34,34 @@ export default class Layout extends React.Component {
 	}
 
   render() {
+		const buttonStyle = {
+			marginLeft: this.state.drawerWidth, 
+			position: 'absolute', 
+			top: '0'
+		}
+
     return (
-      <div style={style}>
-				<Header />
-				<FloatingActionButton label="Toggle Drawer" 
-															onTouchTap={this.toggle} 
-															style={{
-																marginLeft: this.state.drawerWidth, 
-																position: 'absolute', 
-																top: '0'
-				}}>
-					<MenuIcon />
-				</FloatingActionButton>
-				<Drawer open={this.state.open} style={{width: this.state.drawerWidth}}>
-          <Link href={paths.home}>
-						<MenuItem>Login</MenuItem>
-					</Link>
-          <Link href={paths.nova_conta}>
-						<MenuItem>Nova conta</MenuItem>
-					</Link>
-        </Drawer>
-				{this.props.children}
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+				<div style={style}>
+					<Header />
+					<FloatingActionButton 
+						label="Toggle Drawer" 
+						onTouchTap={this.toggle} 
+						style={buttonStyle}
+					>
+						<MenuIcon />
+					</FloatingActionButton>
+					<Drawer open={this.state.open} style={{width: this.state.drawerWidth}}>
+						<Link href={paths.home}>
+							<MenuItem>Login</MenuItem>
+						</Link>
+						<Link href={paths.nova_conta}>
+							<MenuItem>Nova conta</MenuItem>
+						</Link>
+					</Drawer>
+					{this.props.children}
+				</div>
+      </MuiThemeProvider>
     );
   }
 }

@@ -40,18 +40,6 @@ var _reactTapEventPlugin = require('react-tap-event-plugin');
 
 var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
-
-var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
-
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
-
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
-
-var _AppBar = require('material-ui/AppBar');
-
-var _AppBar2 = _interopRequireDefault(_AppBar);
-
 var _TextField = require('material-ui/TextField');
 
 var _TextField2 = _interopRequireDefault(_TextField);
@@ -69,8 +57,7 @@ var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/pages/index
 try {
   (0, _reactTapEventPlugin2.default)();
 } catch (error) {}
-
-var muiTheme = (0, _getMuiTheme2.default)({ userAgent: false });
+;
 
 var _class = function (_React$Component) {
   (0, _inherits3.default)(_class, _React$Component);
@@ -84,14 +71,15 @@ var _class = function (_React$Component) {
   (0, _createClass3.default)(_class, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        }
-      }, _react2.default.createElement(_Layout2.default, {
+      return _react2.default.createElement(_Layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 17
+        }
+      }, _react2.default.createElement(_Home2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
         }
       }));
     }

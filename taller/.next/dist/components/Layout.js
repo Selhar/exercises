@@ -60,10 +60,20 @@ var _Header = require('./Header');
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+
+var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+
+var _getMuiTheme = require('material-ui/styles/getMuiTheme');
+
+var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/Layout.js';
 
+
+var muiTheme = (0, _getMuiTheme2.default)({ userAgent: false });
 
 var style = {
 	margin: '15px',
@@ -101,53 +111,61 @@ var Layout = function (_React$Component) {
 	(0, _createClass3.default)(Layout, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', { style: style, __source: {
+			var buttonStyle = {
+				marginLeft: this.state.drawerWidth,
+				position: 'absolute',
+				top: '0'
+			};
+
+			return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 34
+					lineNumber: 44
+				}
+			}, _react2.default.createElement('div', { style: style, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 45
 				}
 			}, _react2.default.createElement(_Header2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 35
-				}
-			}), _react2.default.createElement(_FloatingActionButton2.default, { label: 'Toggle Drawer',
-				onTouchTap: this.toggle,
-				style: {
-					marginLeft: this.state.drawerWidth,
-					position: 'absolute',
-					top: '0'
-				}, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 36
-				}
-			}, _react2.default.createElement(_menu2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 43
-				}
-			})), _react2.default.createElement(_Drawer2.default, { open: this.state.open, style: { width: this.state.drawerWidth }, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 45
-				}
-			}, _react2.default.createElement(_link2.default, { href: _paths2.default.home, __source: {
-					fileName: _jsxFileName,
 					lineNumber: 46
 				}
-			}, _react2.default.createElement(_MenuItem2.default, {
+			}), _react2.default.createElement(_FloatingActionButton2.default, {
+				label: 'Toggle Drawer',
+				onTouchTap: this.toggle,
+				style: buttonStyle,
 				__source: {
 					fileName: _jsxFileName,
 					lineNumber: 47
 				}
-			}, 'Login')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_conta, __source: {
+			}, _react2.default.createElement(_menu2.default, {
+				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 49
+					lineNumber: 52
+				}
+			})), _react2.default.createElement(_Drawer2.default, { open: this.state.open, style: { width: this.state.drawerWidth }, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 54
+				}
+			}, _react2.default.createElement(_link2.default, { href: _paths2.default.home, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 55
 				}
 			}, _react2.default.createElement(_MenuItem2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 50
+					lineNumber: 56
 				}
-			}, 'Nova conta'))), this.props.children);
+			}, 'Login')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_conta, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 58
+				}
+			}, _react2.default.createElement(_MenuItem2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 59
+				}
+			}, 'Nova conta'))), this.props.children));
 		}
 	}]);
 
