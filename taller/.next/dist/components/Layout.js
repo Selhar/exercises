@@ -4,6 +4,14 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _getIterator2 = require('babel-runtime/core-js/get-iterator');
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -130,17 +138,52 @@ var Layout = function (_React$Component) {
 				top: '0'
 			};
 
+			var routes = [];
+			var _iteratorNormalCompletion = true;
+			var _didIteratorError = false;
+			var _iteratorError = undefined;
+
+			try {
+				for (var _iterator = (0, _getIterator3.default)((0, _keys2.default)(_paths2.default)), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+					var key = _step.value;
+
+					routes.push(_react2.default.createElement(_link2.default, { href: _paths2.default[key][0], __source: {
+							fileName: _jsxFileName,
+							lineNumber: 55
+						}
+					}, _react2.default.createElement(_MenuItem2.default, {
+						__source: {
+							fileName: _jsxFileName,
+							lineNumber: 56
+						}
+					}, _paths2.default[key][1])));
+				}
+			} catch (err) {
+				_didIteratorError = true;
+				_iteratorError = err;
+			} finally {
+				try {
+					if (!_iteratorNormalCompletion && _iterator.return) {
+						_iterator.return();
+					}
+				} finally {
+					if (_didIteratorError) {
+						throw _iteratorError;
+					}
+				}
+			}
+
 			return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 53
+					lineNumber: 62
 				}
 			}, _react2.default.createElement('div', { style: style, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 54
+					lineNumber: 63
 				}
 			}, _react2.default.createElement(_Header2.default, { titulo: this.props.titulo, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 55
+					lineNumber: 64
 				}
 			}), _react2.default.createElement(_FloatingActionButton2.default, {
 				label: 'Toggle Drawer',
@@ -148,63 +191,18 @@ var Layout = function (_React$Component) {
 				style: buttonStyle,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 56
+					lineNumber: 65
 				}
 			}, _react2.default.createElement(_menu2.default, {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 61
+					lineNumber: 70
 				}
 			})), _react2.default.createElement(_Drawer2.default, { open: this.state.open, style: { width: this.state.drawerWidth }, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 63
+					lineNumber: 72
 				}
-			}, _react2.default.createElement(_link2.default, { href: _paths2.default.home, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 64
-				}
-			}, _react2.default.createElement(_MenuItem2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 65
-				}
-			}, 'Login')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_conta, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 67
-				}
-			}, _react2.default.createElement(_MenuItem2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 68
-				}
-			}, 'Nova conta')), _react2.default.createElement(_link2.default, { href: _paths2.default.dashboard, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 70
-				}
-			}, _react2.default.createElement(_MenuItem2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 71
-				}
-			}, 'Dashboard')), _react2.default.createElement(_link2.default, { href: _paths2.default.novo_pedido, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 73
-				}
-			}, _react2.default.createElement(_MenuItem2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 74
-				}
-			}, 'Novo Pedido')), _react2.default.createElement(_link2.default, { href: _paths2.default.nova_empresa, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 76
-				}
-			}, _react2.default.createElement(_MenuItem2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 77
-				}
-			}, 'Nova Empresa'))), this.props.children));
+			}, routes), this.props.children));
 		}
 	}]);
 

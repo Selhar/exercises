@@ -49,6 +49,15 @@ export default class Layout extends React.Component {
 			top: '0'
 		}
 
+		let routes = [];
+		for(let key of Object.keys(paths)) {
+			routes.push(
+				<Link href={paths[key][0]}>
+					<MenuItem>{paths[key][1]}</MenuItem>
+				</Link>
+			)
+		}
+
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
 				<div style={style}>
@@ -61,21 +70,7 @@ export default class Layout extends React.Component {
 						<MenuIcon />
 					</FloatingActionButton>
 					<Drawer open={this.state.open} style={{width: this.state.drawerWidth}}>
-						<Link href={paths.home}>
-							<MenuItem>Login</MenuItem>
-						</Link>
-						<Link href={paths.nova_conta}>
-							<MenuItem>Nova conta</MenuItem>
-						</Link>
-						<Link href={paths.dashboard}>
-							<MenuItem>Dashboard</MenuItem>
-						</Link>
-						<Link href={paths.novo_pedido}>
-							<MenuItem>Novo Pedido</MenuItem>
-						</Link>
-						<Link href={paths.nova_empresa}>
-							<MenuItem>Nova Empresa</MenuItem>
-						</Link>
+						{routes}
 					</Drawer>
 					{this.props.children}
 				</div>

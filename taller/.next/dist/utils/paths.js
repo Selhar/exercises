@@ -9,12 +9,13 @@ Object.defineProperty(exports, "__esModule", {
 var root = '/';
 
 var paths = {
-	home: root,
-	nova_conta: root + 'nova_conta',
-	dashboard: root + 'dashboard',
-	nova_empresa: root + 'nova_empresa',
-	pedido: root + 'pedido',
-	novo_pedido: root + 'novo_pedido'
+	home: [root, 'Login'],
+	nova_conta: [root + 'nova_conta', 'Nova conta'],
+	dashboard: [root + 'dashboard', 'Dashboard'],
+	nova_empresa: [root + 'nova_empresa', 'Nova empresa'],
+	pedido: [root + 'pedido', 'Pedidos'],
+	novo_pedido: [root + 'novo_pedido', 'Novo pedido'],
+	minha_conta: [root + 'minha_conta', 'Minha conta']
 };
 
 exports.default = paths;

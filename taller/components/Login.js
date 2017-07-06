@@ -30,7 +30,7 @@ const Login = () => (
 			<TextField hintText="Senha" />
 			<br />
 			<div style={buttonStyle}>
-				<Link href={paths.nova_conta}>
+				<Link href={paths['nova_conta'][0]}>
 					<RaisedButton style={individualButtonStyle} label="Nova conta" secondary={true} />
 				</Link>
 				<RaisedButton style={individualButtonStyle} label="Login" primary={true} />
