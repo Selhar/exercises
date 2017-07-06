@@ -18,7 +18,7 @@ const individualButtonStyle = {
 };
 
 const nova_conta = () => (
-	<Layout>
+	<Layout titulo="Nova conta" descricao="Criação de nova conta">
 		<div style={style}>
 			<form>
 				<TextField hintText="E-mail" />

@@ -125,8 +125,7 @@ var Layout = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 45
 				}
-			}, _react2.default.createElement(_Header2.default, {
-				__source: {
+			}, _react2.default.createElement(_Header2.default, { titulo: this.props.titulo, __source: {
 					fileName: _jsxFileName,
 					lineNumber: 46
 				}

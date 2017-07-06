@@ -21,7 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/components/Header.js';
 
 
-var style = {
+var styleTaller = {
 	textAlign: 'center',
 	fontFamily: '"Alegreya", serif',
 	fontStyle: 'italic',
@@ -31,35 +31,49 @@ var style = {
 	fontSize: '2.5em'
 };
 
-var Header = function Header() {
+var styleHeader = {
+	textAlign: 'center',
+	fontSize: '2.5em',
+	fontWeight: 'bold'
+};
+
+var Header = function Header(props) {
 	return _react2.default.createElement('div', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 15
+			lineNumber: 21
 		}
 	}, _react2.default.createElement(_head2.default, {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 16
+			lineNumber: 22
 		}
 	}, _react2.default.createElement('title', {
 		__source: {
 			fileName: _jsxFileName,
-			lineNumber: 17
+			lineNumber: 23
 		}
-	}, 'Taller teste t\xE9cnico'), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
+	}, props.titulo || ''), _react2.default.createElement('meta', { name: 'description', content: props.descricao, __source: {
 			fileName: _jsxFileName,
-			lineNumber: 18
+			lineNumber: 24
+		}
+	}), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
+			fileName: _jsxFileName,
+			lineNumber: 25
 		}
 	}), _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Alegreya', rel: 'stylesheet', __source: {
 			fileName: _jsxFileName,
-			lineNumber: 19
+			lineNumber: 26
 		}
-	})), _react2.default.createElement('h1', { style: style, __source: {
+	}), _react2.default.createElement('link', { rel: 'icon', href: '/static/favicon.png', __source: {
 			fileName: _jsxFileName,
-			lineNumber: 21
+			lineNumber: 27
 		}
-	}, 'Taller'));
+	})), _react2.default.createElement('h1', { style: props.titulo.toString().toLowerCase() == 'taller' ? styleTaller : styleHeader, __source: {
+			fileName: _jsxFileName,
+			lineNumber: 29
+		}
+	}, props.titulo));
 };
 
 exports.default = Header;

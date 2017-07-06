@@ -43,7 +43,7 @@ export default class Layout extends React.Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
 				<div style={style}>
-					<Header />
+					<Header titulo={this.props.titulo}/>
 					<FloatingActionButton 
 						label="Toggle Drawer" 
 						onTouchTap={this.toggle} 

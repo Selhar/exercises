@@ -14,7 +14,7 @@ try {
 export default class extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout titulo="Taller" descricao="Tela de login">
         <Home />
       </Layout>
     )
