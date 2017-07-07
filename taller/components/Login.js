@@ -38,7 +38,6 @@ export default class Login extends React.Component {
 	}
 	
 	validaInput() {
-		console.log(this.state);
 		if(this.state.login == ""){
 			this.setState({erroLogin: mensagem_erro});
 		}else{
@@ -52,9 +51,9 @@ export default class Login extends React.Component {
 	}
 
 	gerenciaInput(evento) {
-  	const name = evento.target.name;
-  	const value = evento.target.value;
-  	this.setState({[name]: value});
+		const name = evento.target.name;
+		const value = evento.target.value;
+		this.setState({[name]: value});
 	}
 
   render() {
