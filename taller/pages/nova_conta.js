@@ -5,18 +5,18 @@ import Layout from '../components/Layout';
 const mensagem_erro = "Este campo é obrigatório";
 
 const style = {
-	display: 'flex',
-	justifyContent: 'center',
-	alignItems: 'center',
-	height: '80vh'
-};
-
-const buttonStyle = {
-	width: '100%',
-};
-
-const individualButtonStyle = {
-	width: '50%',
+	main: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		height: '80vh'
+	},
+	button: {
+		width: '100%',
+	},
+	individualButton: {
+		width: '50%',
+	}
 };
 
 export default class Nova_conta extends React.Component {
@@ -61,7 +61,7 @@ export default class Nova_conta extends React.Component {
 	render() {
 		return(
 			<Layout titulo="Nova conta" descricao="Criação de nova conta">
-				<div style={style}>
+				<div style={style.main}>
 					<form>
 						<TextField 
 							onChange={(evento) => this.gerenciaInput(evento)}
@@ -94,12 +94,12 @@ export default class Nova_conta extends React.Component {
 						/>
 						<br />
 						<RaisedButton 
-							style={individualButtonStyle} 
+							style={style.individualButton} 
 							label="Limpar" 
 							secondary={true} 
 						/>
 						<RaisedButton 
-							style={individualButtonStyle} 
+							style={style.individualButton} 
 							label="Confirmar" 
 							onClick={this.validaInput}
 							primary={true} 

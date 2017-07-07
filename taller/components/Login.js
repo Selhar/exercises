@@ -6,23 +6,14 @@ import paths from '../utils/paths';
 const mensagem_erro = "Este campo é obrigatório";
 
 const style = {
-	
+	button: {
+		width: '100%',
+	},
+	individualButton: {
+		width: '50%',
+		fontSize: '1vw'
+	}
 };
-
-const buttonStyle = {
-	width: '100%',
-};
-
-const individualButtonStyle = {
-	width: '50%',
-	fontSize: '1vw'
-};
-
-const Header = {
-	position: 'absolute',
-	top: '25px',
-	
-}
 
 export default class Login extends React.Component {
 	constructor(props){
@@ -58,7 +49,7 @@ export default class Login extends React.Component {
 
   render() {
 		return (
-			<div style={style}>
+			<div>
 				<form>
 					<TextField 
 						onChange={(evento) => this.gerenciaInput(evento)}
@@ -78,15 +69,15 @@ export default class Login extends React.Component {
 						value={this.state.senha}
 						errorText={this.state.erroSenha} />
 					<br />
-					<div style={buttonStyle}>
+					<div style={style.button}>
 						<Link href={paths['nova_conta'][0]}>
 							<RaisedButton 
-								style={individualButtonStyle} 
+								style={style.individualButton} 
 								label="Nova conta"
 								secondary={true} />
 						</Link>
 						<RaisedButton 
-							style={individualButtonStyle} 
+							style={style.individualButton} 
 							label="Login" 
 							onClick={this.validaInput}
 							primary={true} />
