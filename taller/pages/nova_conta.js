@@ -2,14 +2,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Layout from '../components/Layout';
 
-const original_state = {
-			email: "",
-			emailError: "",
-			senha_1: "",
-			senha_1Error: "",
-			senha_2: "",
-			senha_2Error: "",
-};
+const mensagem_erro = "Este campo é obrigatório";
 
 const style = {
 	display: 'flex',
@@ -30,7 +23,12 @@ export default class Nova_conta extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			original_state
+			email: "",
+			emailError: "",
+			senha_1: "",
+			senha_1Error: "",
+			senha_2: "",
+			senha_2Error: "",
 		};
 
 		this.validaInput = this.validaInput.bind(this);
@@ -68,11 +66,11 @@ export default class Nova_conta extends React.Component {
 						<TextField 
 							onChange={(evento) => this.gerenciaInput(evento)}
 							hintText="E-mail"
-							type="email"
+							type="text"
 							name="email"
 							floatingLabelText="E-mail"
 							value={this.state.email}
-							errorText={this.state.erroLogin}
+							errorText={this.state.emailError}
 						/>
 						<br />
 						<TextField 

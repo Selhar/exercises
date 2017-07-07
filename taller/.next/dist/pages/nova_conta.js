@@ -49,14 +49,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/home/selhar/Documents/projetos/exercises/taller/pages/nova_conta.js?entry';
 
 
-var original_state = {
-	email: "",
-	emailError: "",
-	senha_1: "",
-	senha_1Error: "",
-	senha_2: "",
-	senha_2Error: ""
-};
+var mensagem_erro = "Este campo é obrigatório";
 
 var style = {
 	display: 'flex',
@@ -82,7 +75,12 @@ var Nova_conta = function (_React$Component) {
 		var _this = (0, _possibleConstructorReturn3.default)(this, (Nova_conta.__proto__ || (0, _getPrototypeOf2.default)(Nova_conta)).call(this, props));
 
 		_this.state = {
-			original_state: original_state
+			email: "",
+			emailError: "",
+			senha_1: "",
+			senha_1Error: "",
+			senha_2: "",
+			senha_2Error: ""
 		};
 
 		_this.validaInput = _this.validaInput.bind(_this);
@@ -122,35 +120,35 @@ var Nova_conta = function (_React$Component) {
 
 			return _react2.default.createElement(_Layout2.default, { titulo: 'Nova conta', descricao: 'Cria\xE7\xE3o de nova conta', __source: {
 					fileName: _jsxFileName,
-					lineNumber: 65
+					lineNumber: 63
 				}
 			}, _react2.default.createElement('div', { style: style, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 66
+					lineNumber: 64
 				}
 			}, _react2.default.createElement('form', {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 67
+					lineNumber: 65
 				}
 			}, _react2.default.createElement(_TextField2.default, {
 				onChange: function onChange(evento) {
 					return _this2.gerenciaInput(evento);
 				},
 				hintText: 'E-mail',
-				type: 'email',
+				type: 'text',
 				name: 'email',
 				floatingLabelText: 'E-mail',
 				value: this.state.email,
-				errorText: this.state.erroLogin,
+				errorText: this.state.emailError,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 68
+					lineNumber: 66
 				}
 			}), _react2.default.createElement('br', {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 77
+					lineNumber: 75
 				}
 			}), _react2.default.createElement(_TextField2.default, {
 				onChange: function onChange(evento) {
@@ -164,12 +162,12 @@ var Nova_conta = function (_React$Component) {
 				errorText: this.state.senha_1Error,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 78
+					lineNumber: 76
 				}
 			}), _react2.default.createElement('br', {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 87
+					lineNumber: 85
 				}
 			}), _react2.default.createElement(_TextField2.default, {
 				onChange: function onChange(evento) {
@@ -183,12 +181,12 @@ var Nova_conta = function (_React$Component) {
 				errorText: this.state.senha_2Error,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 88
+					lineNumber: 86
 				}
 			}), _react2.default.createElement('br', {
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 97
+					lineNumber: 95
 				}
 			}), _react2.default.createElement(_RaisedButton2.default, {
 				style: individualButtonStyle,
@@ -196,7 +194,7 @@ var Nova_conta = function (_React$Component) {
 				secondary: true,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 98
+					lineNumber: 96
 				}
 			}), _react2.default.createElement(_RaisedButton2.default, {
 				style: individualButtonStyle,
@@ -205,7 +203,7 @@ var Nova_conta = function (_React$Component) {
 				primary: true,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 103
+					lineNumber: 101
 				}
 			}))));
 		}
