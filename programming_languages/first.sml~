@@ -1,0 +1,6 @@
+fun is_older(is_younger : int * int * int, is_old : int * int * int) = 
+  if (#1 is_younger < #2 is_old)
+  then #2 is_younger
+  else #3 is_younger;
+
+is_older((1,2,3), (3,2,4));
