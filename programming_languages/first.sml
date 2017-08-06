@@ -17,3 +17,9 @@ fun number_in_month(dates: (int * int * int) list, month: int) =
 	  then 0 + tl_dates
 	  else 1 + tl_dates
       end
+	  
+fun number_in_months(dates: (int * int * int) list, months: int list) =
+  if null months
+  then 0
+  else number_in_month(dates, hd months) + number_in_months(dates, tl months);
+  
