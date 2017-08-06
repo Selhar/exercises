@@ -40,3 +40,18 @@ fun dates_in_months(dates: (int*int*int) list, months: int list) =
   else dates_in_month(dates, hd months) @ dates_in_months(dates, tl months);
 		     
   
+fun get_nth(text: string list, number: int) =
+  if number = 1
+  then hd text
+  else get_nth(tl text, number - 1);
+
+fun date_to_string(date: int*int*int) =
+  let 
+    val months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    fun fetch_month(index: int, month_list: string list) =
+      if index = 1
+      then hd month_list
+      else fetch_month(index-1, tl month_list)
+  in
+      (fetch_month(#2 date, months)) ^ " " ^ Int.toString(#3 date) ^ ", " ^ Int.toString(#1 date)
+  end
