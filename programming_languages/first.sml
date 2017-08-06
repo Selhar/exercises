@@ -8,7 +8,12 @@ fun is_older(early: int*int*int, late:int*int*int) =
   else false
 
 fun number_in_month(dates: (int * int * int) list, month: int) =
-  if null dates
+  if null dates orelse (null (tl dates) andalso (#2 (hd dates)) <> month)
   then 0
-  else if #2 (hd dates) = month
-  then 1 + number_in_month(tl dates, month);
+  else
+      let val tl_dates = number_in_month(tl dates, month);
+      in
+	  if #2 (hd dates) <> month
+	  then 0 + tl_dates
+	  else 1 + tl_dates
+      end
