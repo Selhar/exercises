@@ -57,18 +57,6 @@ fun date_to_string(date: int*int*int) =
   end
 
 fun number_before_reaching_sum (sum: int, values: int list) = 
-  let 
-    fun additional_variable(sum: int * int, values: int list) =
-      if null values
-      then 0
-      else
-        let 
-          val tl_values = additional_variable (sum, tl values)
-        in
-          if hd values + tl_values < #1 sum
-          then (hd values + tl_values, (#2 sum) + 1)
-          else (hd values, #2 sum)
-        end
-  in
-    #2 (additional_variable((sum, 0), values))
-  end
+  if hd values >= sum
+  then 0
+  else 1 + number_before_reaching_sum(sum - hd values, tl values)
