@@ -67,3 +67,22 @@ fun what_month (day: int) =
   in
     1 + number_before_reaching_sum(day, months)
   end
+
+fun month_range (day_1: int, day_2: int) =
+  if(day_1 > day_2)
+  then []
+  else what_month(day_1) :: month_range(day_1 + 1, day_2)
+
+fun oldest (dates: (int*int*int) list) =
+  if null dates
+  then NONE
+  else 
+    let 
+      val tail = oldest(tl dates)
+    in
+      if isSome(tail) 
+      then if is_older(hd dates, valOf tail)
+        then SOME(hd dates)
+        else tail
+      else SOME(hd dates)
+    end
