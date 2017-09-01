@@ -1,0 +1,6 @@
+[package]
+name = "hi_cargo"
+version = "0.1.0"
+authors = ["Selhar <selhar@protonmail.com>"]
+
+[dependencies]
